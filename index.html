@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brandon Muted | Data Analyst</title>
+<meta name="description" content="Brandon Muted is a data analyst working on sales, churn, logistics and restaurant management projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F6; --surface:#FFFFFF; --ink:#101828; --muted:#4A5568;
+  --line:#CBD5E1; --accent:#2B3FD6; --accent-ink:#FFFFFF; --hi:#F2A900; --grid:rgba(43,63,214,.08);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E1420; --surface:#161E2E; --ink:#E8EDF5; --muted:#A3B0C4; --line:#2B3750; --accent:#8C9CFF; --accent-ink:#0E1420; --hi:#F2B93B; --grid:rgba(140,156,255,.09);}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;
+  color:var(--ink);background:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{padding:18px 0}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;text-decoration:none}
+nav{display:flex;gap:18px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink);text-decoration:underline}
+
+.hero{padding:48px 0 56px}
+.hero h1{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+  font-size:clamp(2.4rem,8vw,4.6rem);line-height:1.02;letter-spacing:-.02em;max-width:14em;
+}
+.intro{display:flex;flex-wrap:wrap-reverse;gap:28px;align-items:center;justify-content:space-between}
+.intro .text{flex:1 1 380px}
+.avatar{width:180px;height:180px;object-fit:cover;border-radius:50%;border:4px solid var(--accent);background:var(--surface);flex:0 0 auto}
+.shot{display:block;width:calc(100% + 44px);margin:-22px -22px 18px;aspect-ratio:16/9;object-fit:cover;background:var(--line);border-bottom:1px solid var(--line)}
+.hero p.lead{margin-top:20px;max-width:34em;color:var(--muted);font-size:1.15rem}
+.chart{margin-top:36px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
+.chart svg{display:block;width:100%;height:auto}
+.chart .axis{stroke:var(--line);stroke-width:1}
+.chart .l1{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.8s .2s ease-out forwards}
+.chart .dot{fill:var(--hi);stroke:var(--surface);stroke-width:3;opacity:0;animation:pop .3s 1.9s forwards}
+.chart text{font:500 13px "IBM Plex Sans",sans-serif;fill:var(--muted)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.chart .l1{animation:none;stroke-dashoffset:0}.chart .dot{animation:none;opacity:1}html{scroll-behavior:auto}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:12px 20px;border-radius:4px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--ink)}
+.btn:hover{filter:brightness(1.1)}
+
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.9rem;letter-spacing:-.01em;margin-bottom:24px}
+.about p{max-width:40em;color:var(--muted)}
+.about p+p{margin-top:14px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:4px;padding:22px}
+.card:nth-child(2){border-left-color:var(--hi)}
+.card:nth-child(3){border-left-color:var(--hi)}
+.card h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted)}
+.card dl{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.95rem}
+.card dt{font-weight:500}
+.card dd{color:var(--muted)}
+.card a.link{display:inline-block;margin-top:14px;font-weight:500}
+.skills{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.skills li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:.95rem}
+.contact p{max-width:34em;color:var(--muted)}
+.contact ul{list-style:none;padding:0;margin-top:18px;display:grid;gap:8px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:520px){nav{gap:12px;font-size:.9rem}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Brandon Muted</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="intro">
+      <div class="text">
+        <h1>Data that tells a business what to do next.</h1>
+        <p class="lead">I'm Brandon Muted, a data analyst. I work on sales, customer churn, logistics and restaurant management, turning raw records into clear answers.</p>
+      </div>
+      <img class="avatar" src="images/profile.jpg" alt="Portrait of Brandon Muted" width="180" height="180">
+    </div>
+
+    <div class="chart" role="img" aria-label="Illustrative line chart trending upward">
+      <svg viewBox="0 0 800 220" preserveAspectRatio="xMidYMid meet">
+        <line class="axis" x1="30" y1="190" x2="780" y2="190"/>
+        <line class="axis" x1="30" y1="20" x2="30" y2="190"/>
+        <polyline class="l1" points="30,160 120,140 210,150 300,110 390,120 480,80 570,95 660,50 750,40"/>
+        <circle class="dot" cx="750" cy="40" r="8"/>
+        <text x="30" y="212">Sales</text>
+        <text x="270" y="212">Churn</text>
+        <text x="500" y="212">Logistics</text>
+        <text x="690" y="212">Restaurants</text>
+      </svg>
+    </div>
+
+    <div class="cta">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>I clean messy data, find the pattern behind it, and explain it in plain language so teams can act on it.</p>
+      <p>My projects cover four areas: what drives sales, why customers leave, how goods move through a supply chain, and how restaurants run day to day.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <article class="card">
+          <img class="shot" src="images/sales.png" alt="Dashboard from the sales analysis project" loading="lazy">
+          <h3>Sales analysis</h3>
+          <p>Looked at sales performance across products, periods and customers to show what sells, when, and where growth is coming from.</p>
+          <dl>
+            <dt>Tools</dt><dd>Add your tools (e.g. Excel, SQL, Power BI)</dd>
+            <dt>Result</dt><dd>Add your key finding</dd>
+          </dl>
+          <a class="link" href="#">View project</a>
+        </article>
+
+        <article class="card">
+          <img class="shot" src="images/churn.png" alt="Charts from the churn analysis project" loading="lazy">
+          <h3>Churn analysis</h3>
+          <p>Studied which customers leave and what they have in common, so the business can spot at-risk accounts earlier.</p>
+          <dl>
+            <dt>Tools</dt><dd>Add your tools (e.g. Python, SQL, Tableau)</dd>
+            <dt>Result</dt><dd>Add your key finding</dd>
+          </dl>
+          <a class="link" href="#">View project</a>
+        </article>
+
+        <article class="card">
+          <img class="shot" src="images/logistics.png" alt="Dashboard from the logistics project" loading="lazy">
+          <h3>Logistics</h3>
+          <p>Analyzed deliveries, routes and delays to find where time and cost are lost in moving goods.</p>
+          <dl>
+            <dt>Tools</dt><dd>Add your tools</dd>
+            <dt>Result</dt><dd>Add your key finding</dd>
+          </dl>
+          <a class="link" href="#">View project</a>
+        </article>
+
+        <article class="card">
+          <img class="shot" src="images/restaurant.png" alt="Dashboard from the restaurant management project" loading="lazy">
+          <h3>Restaurant management</h3>
+          <p>Reviewed orders, menu performance and operating costs to help a restaurant plan better and waste less.</p>
+          <dl>
+            <dt>Tools</dt><dd>Add your tools</dd>
+            <dt>Result</dt><dd>Add your key finding</dd>
+          </dl>
+          <a class="link" href="#">View project</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Data cleaning</li>
+        <li>Exploratory analysis</li>
+        <li>Dashboards</li>
+        <li>Reporting</li>
+        <li>SQL</li>
+        <li>Excel</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Have data that needs answers? Send me a message.</p>
+      <ul>
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+        <li><a href="https://github.com/yourusername">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Brandon Muted</div>
+</footer>
+
+</body>
+</html>
