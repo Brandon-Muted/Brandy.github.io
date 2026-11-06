@@ -10,19 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#EEF2F6; --surface:#FFFFFF; --ink:#101828; --muted:#4A5568;
-  --line:#CBD5E1; --accent:#2B3FD6; --accent-ink:#FFFFFF; --hi:#F2A900; --grid:rgba(43,63,214,.08);
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0E1420; --surface:#161E2E; --ink:#E8EDF5; --muted:#A3B0C4; --line:#2B3750; --accent:#8C9CFF; --accent-ink:#0E1420; --hi:#F2B93B; --grid:rgba(140,156,255,.09);}
+  --bg:#0B1B33; --surface:#142A45; --ink:#F1F5F9; --muted:#B7C5D8;
+  --line:#2D4563; --accent:#8C9CFF; --accent-ink:#0B1B33; --hi:#F2B93B;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{
   font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;
   color:var(--ink);background:var(--bg);
-  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:32px 32px;
 }
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
