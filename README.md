@@ -13,4 +13,4 @@ Python (pandas, matplotlib) · SQL · Excel · Jupyter Notebook
 🔍 Bank customer churn analysis: finding what drives customers to leave
 
 ## Let's connect
-📫 [LinkedIn](your-link) · 🌐 [Portfolio](your-link)
+📫 [LinkedIn](https://www.linkedin.com/feed/) · 🌐 [Portfolio](https://brandon-muted.github.io/Brandy.github.io/#contact)
