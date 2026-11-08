@@ -7,7 +7,7 @@ I'm a data analyst who loves the moment a messy dataset starts making sense.
 - Turn findings into plain-English insights teams can act on
 
 ## Tools
-Python (pandas, matplotlib) · SQL · Excel · Jupyter Notebook
+Excel || SQL || Power BI || Python || SPSS
 
 ## Currently working on
 🔍 Bank customer churn analysis: finding what drives customers to leave
