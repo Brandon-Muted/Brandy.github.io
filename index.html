@@ -52,19 +52,19 @@ nav a:hover{color:var(--ink);text-decoration:underline}
 .chart .axis{stroke:var(--line);stroke-width:1}
 .chart .l1{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.8s .2s ease-out forwards}
 .chart .dot{fill:var(--hi);stroke:var(--surface);stroke-width:3;opacity:0;animation:pop .3s 1.9s forwards}
-.chart text{font:500 13px "IBM Plex Sans",sans-serif;fill:#800020;animation:labelBurgundy 2.4s ease-in-out infinite alternate}
+.chart text{font:700 13px "IBM Plex Sans",sans-serif;fill:#ff4d8d;letter-spacing:.02em;text-shadow:0 0 10px rgba(255,77,141,.8);animation:labelBurgundy 1.6s ease-in-out infinite alternate}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes pop{to{opacity:1}}
 @keyframes labelBurgundy{
-  from{fill:#800020}
-  to{fill:#B03060}
+  from{fill:#d81b60;text-shadow:0 0 8px rgba(216,27,96,.75)}
+  to{fill:#ff6ba8;text-shadow:0 0 16px rgba(255,107,168,.95)}
 }
 @keyframes brandShimmer{
   0%{background-position:0% 50%;letter-spacing:.02em}
   50%{background-position:100% 50%;letter-spacing:.05em}
   100%{background-position:0% 50%;letter-spacing:.02em}
 }
-@media (prefers-reduced-motion:reduce){.chart .l1{animation:none;stroke-dashoffset:0}.chart .dot{animation:none;opacity:1}.chart text{animation:none;fill:#800020}.brand{animation:none;background-position:0% 50%;letter-spacing:0}.html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.chart .l1{animation:none;stroke-dashoffset:0}.chart .dot{animation:none;opacity:1}.chart text{animation:none;fill:#ff4d8d;text-shadow:none}.brand{animation:none;background-position:0% 50%;letter-spacing:0}.html{scroll-behavior:auto}}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-block;padding:12px 20px;border-radius:4px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
