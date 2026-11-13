@@ -48,7 +48,8 @@ nav a:hover{color:var(--ink);text-decoration:underline}
 .sales-gallery,.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:-22px -22px 18px;width:100%}
 .sales-gallery img,.project-gallery img{display:block;width:100%;height:100%;min-height:180px;object-fit:contain;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:4px}
 .sales-gallery img:first-child,.project-gallery img:first-child{grid-column:1 / -1;aspect-ratio:16/9}
-.project-gallery img:not(:first-child){object-fit:cover}
+.project-gallery{grid-template-columns:1fr;width:calc(100% + 44px)}
+.project-gallery img,.project-gallery img:first-child{grid-column:auto;aspect-ratio:16/9;object-fit:cover}
 .hero p.lead{margin-top:20px;max-width:34em;color:var(--muted);font-size:1.15rem}
 .chart{margin-top:36px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
 .chart svg{display:block;width:100%;height:auto}
@@ -92,15 +93,15 @@ h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.9rem
 .contact ul{list-style:none;padding:0;margin-top:18px;display:grid;gap:8px}
 footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 @media (max-width:700px){
-  .sales-gallery,.project-gallery{margin:-12px -12px 14px}
+  .sales-gallery{margin:-12px -12px 14px}
   .sales-gallery img,.project-gallery img{min-height:150px}
 }
 @media (max-width:520px){
   nav{gap:12px;font-size:.9rem}
-  .sales-gallery,.project-gallery{grid-template-columns:1fr;gap:8px}
-  .sales-gallery img:first-child,.project-gallery img:first-child{grid-column:auto;aspect-ratio:4/3}
+  .sales-gallery{grid-template-columns:1fr;gap:8px}
+  .sales-gallery img:first-child{grid-column:auto;aspect-ratio:4/3}
   .sales-gallery img,.project-gallery img{min-height:200px}
-  .project-gallery img{aspect-ratio:4/3}
+  .sales-gallery img{aspect-ratio:4/3}
 }
 </style>
 </head>
